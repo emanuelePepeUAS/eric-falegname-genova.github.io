@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: single
 title: Letti Giapponesi & Strutture Futon
 permalink: /letti-giapponesi-futon/
 ---
