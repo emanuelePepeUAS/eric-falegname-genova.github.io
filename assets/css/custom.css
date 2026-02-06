@@ -1,0 +1,142 @@
+/* ===== STILE RUSTICO FALEGNAMERIA ERIC ===== */
+
+/* Import font Young Serif per titoli */
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&family=Merriweather:wght@300;400;700&display=swap');
+
+/* Colori rustici legno/artigianato */
+:root {
+  --wood-brown: #8B4513;
+  --dark-slate: #2F4F4F;
+  --chocolate: #D2691E;
+  --warm-cream: #FFF8DC;
+  --natural-beige: #F5DEB3;
+}
+
+/* Sfondo principale caldo */
+body {
+  background-color: var(--warm-cream) !important;
+  color: var(--dark-slate) !important;
+  font-family: 'Merriweather', Georgia, serif !important;
+}
+
+/* Titoli con font artigianale */
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.archive__item-title {
+  font-family: 'Young Serif', Georgia, serif !important;
+  color: var(--wood-brown) !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Header/Navigation con tono legno scuro */
+.masthead,
+.greedy-nav {
+  background-color: var(--wood-brown) !important;
+  border-bottom: 3px solid var(--chocolate);
+}
+
+.masthead__inner-wrap,
+.greedy-nav a {
+  color: var(--warm-cream) !important;
+}
+
+.greedy-nav a:hover {
+  color: var(--natural-beige) !important;
+  background-color: rgba(210, 105, 30, 0.2) !important;
+}
+
+/* Footer con tono naturale */
+.page__footer {
+  background-color: var(--dark-slate) !important;
+  color: var(--natural-beige) !important;
+  border-top: 3px solid var(--chocolate);
+}
+
+.page__footer-copyright {
+  color: var(--natural-beige) !important;
+}
+
+/* Link con colore legno */
+a {
+  color: var(--chocolate) !important;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--chocolate);
+}
+
+a:hover {
+  color: var(--wood-brown) !important;
+  border-bottom: 2px solid var(--wood-brown);
+}
+
+/* Bottoni stile artigianale */
+.btn,
+.page__taxonomy-item {
+  background-color: var(--wood-brown) !important;
+  color: var(--warm-cream) !important;
+  border: 2px solid var(--chocolate) !important;
+  font-family: 'Young Serif', serif !important;
+  text-shadow: none !important;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--chocolate) !important;
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+}
+
+/* Card portfolio con effetto legno */
+.archive__item {
+  background-color: white !important;
+  border: 2px solid var(--natural-beige) !important;
+  border-radius: 8px;
+  box-shadow: 3px 3px 8px rgba(139, 69, 19, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.archive__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 15px rgba(139, 69, 19, 0.25);
+  border-color: var(--chocolate) !important;
+}
+
+/* Texture sottile legno su header */
+.page__hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--wood-brown) 0%, var(--chocolate) 100%) !important;
+}
+
+.page__hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(90deg, 
+      rgba(0,0,0,.03) 0px, 
+      transparent 1px, 
+      transparent 2px, 
+      rgba(0,0,0,.03) 3px);
+  pointer-events: none;
+}
+
+/* Citazioni stile artigianale */
+blockquote {
+  border-left: 5px solid var(--chocolate) !important;
+  background-color: rgba(245, 222, 179, 0.3);
+  padding: 1em 1.5em;
+  font-style: italic;
+  color: var(--dark-slate);
+}
+
+/* Contenuto principale con carta calda */
+.page__content,
+.archive {
+  background-color: white;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(139, 69, 19, 0.1);
+}
