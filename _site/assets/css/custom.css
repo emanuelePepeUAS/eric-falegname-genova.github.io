@@ -20,12 +20,17 @@ body {
 }
 
 /* Titoli con font artigianale */
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .page__title,
 .archive__item-title {
   font-family: 'Young Serif', Georgia, serif !important;
   color: var(--wood-brown) !important;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* Header/Navigation con tono legno scuro */
@@ -76,14 +81,14 @@ a:hover {
   border: 2px solid var(--chocolate) !important;
   font-family: 'Young Serif', serif !important;
   text-shadow: none !important;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 .btn:hover {
   background-color: var(--chocolate) !important;
   transform: translateY(-2px);
-  box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Card portfolio con effetto legno */
@@ -114,12 +119,12 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    repeating-linear-gradient(90deg, 
-      rgba(0,0,0,.03) 0px, 
-      transparent 1px, 
-      transparent 2px, 
-      rgba(0,0,0,.03) 3px);
+  background-image:
+    repeating-linear-gradient(90deg,
+      rgba(0, 0, 0, .03) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(0, 0, 0, .03) 3px);
   pointer-events: none;
 }
 
@@ -139,4 +144,89 @@ blockquote {
   padding: 2em;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(139, 69, 19, 0.1);
+}
+
+/* ===== GRID PORTFOLIO CORRETTO ===== */
+
+/* Container principale */
+.entries-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  /* 2 colonne affiancate */
+  gap: 2rem !important;
+  margin: 2rem 0 !important;
+  width: 100% !important;
+}
+
+/* Il wrapper che causa problemi - forza display block */
+.entries-grid .grid__item,
+.entries-grid>div {
+  width: 100% !important;
+  margin: 0 !important;
+  float: none !important;
+  display: block !important;
+}
+
+/* La card vera */
+.entries-grid .archive__item {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  display: block !important;
+}
+
+/* Foto */
+.archive__item-teaser {
+  width: 100% !important;
+  height: 300px !important;
+  object-fit: cover !important;
+  border-radius: 8px 8px 0 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.archive__item-teaser img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* Contenuto */
+.archive__item-body {
+  padding: 1.5rem !important;
+  background: white !important;
+}
+
+.archive__item-title {
+  font-size: 1.4rem !important;
+  margin: 0 0 0.75rem 0 !important;
+  line-height: 1.3 !important;
+}
+
+.archive__item-title a {
+  text-decoration: none !important;
+}
+
+.archive__item-excerpt {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  margin: 0.5rem 0 0 0 !important;
+}
+
+/* Mobile: 1 colonna */
+@media (max-width: 768px) {
+  .entries-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .archive__item-teaser {
+    height: 220px !important;
+  }
+}
+
+/* Schermi grandi: 3 colonne */
+@media (min-width: 1200px) {
+  .entries-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
 }

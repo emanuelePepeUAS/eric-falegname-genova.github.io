@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Struttura Rialzata per Letto Futon"
+date: 2025-10-20
 excerpt: "Piattaforma giapponese in legno massello per materasso futon"
 header:
   image: /assets/images/portfolio/letto-giapponese-futon.jpg

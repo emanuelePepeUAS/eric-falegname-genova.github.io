@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Sedia di Design"
+date: 2025-11-15
 excerpt: "Sedia di design con tavolo di legno di noce, dimensioni 200x100cm"
 header:
   image: /assets/images/portfolio/sedia-design.jpg

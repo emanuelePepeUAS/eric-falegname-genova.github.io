@@ -1,6 +1,7 @@
 ---
 layout: home
-title: Home
+title: "Home"
+author_profile: true
 ---
 
 # Eric - Falegnameria Artigiana
@@ -20,3 +21,26 @@ Dalle mie radici a **Sant'Stefano in Roero** porto a **Genova** l'autenticità d
 
 Con oltre 10 anni di esperienza, ogni progetto è unico. Lavoro direttamente con te dalla progettazione alla consegna, anche direttamente a casa tua nella zona di Genova e provincia.
 
+---
+
+## 🪵 Portfolio Lavori Tradizionali
+
+<div class="entries-{{ 'grid' }}">
+{% for post in site.portfolio_tradizionale %}
+  {% include archive-single.html type="grid" %}
+{% endfor %}
+</div>
+
+[Vedi tutti →](/portfolio-tradizionale/){: .btn .btn--primary}
+
+---
+
+## 🏯 Letti Giapponesi & Futon
+
+<div class="entries-{{ 'grid' }}">
+{% for post in site.portfolio_giapponese %}
+  {% include archive-single.html type="grid" %}
+{% endfor %}
+</div>
+
+[Vedi tutti →](/portfolio-giapponese/){: .btn .btn--primary}
