@@ -6,15 +6,28 @@ description: >-
   strutture per letti giapponesi (Futon) e interventi a domicilio a Genova e provincia.
   Radici a Sant'Stefano in Roero, artigianato autentico dal 2018.
 
-# URL del sito (quando avrai il dominio o userai github.io)
-url: "https://emanuelepepeuas.github.io/eric-falegname-genova.github.io/"
-baseurl: ""
+# URL del sito
+url: "https://emanuelepepeuas.github.io"
+baseurl: "/eric-falegname-genova.github.io"
 
 # Tema
 remote_theme: mmistakes/minimal-mistakes@4.26.2
-# remote_theme: cotes2020/jekyll-theme-chirpy
-# remote_theme: zerostaticthemes/jekyll-serif-theme
 
+# Configurazione Minimal Mistakes
+minimal_mistakes_skin: "default"
+
+# Site Author
+author:
+  name: "Eric - Falegnameria Artigiana"
+  bio: "Falegname artigiano dal 2018. Sant'Stefano in Roero ➜ Genova"
+  location: "Genova, Italia"
+  links:
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/eric_falegname_genova"
+    - label: "WhatsApp"
+      icon: "fab fa-fw fa-whatsapp"
+      url: "https://wa.me/39123456789"
 
 # Configurazione Portfolio
 collections:
@@ -33,12 +46,31 @@ instagram: "eric_falegname_genova"
 address: "Genova, Italia"
 experience_start: 2018
 
-# Plugin consigliati per SEO e Immagini
+# Plugin
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-remote-theme
-  - jekyll-include-cache  # Necessario per Minimal Mistakes
-  - jekyll-archives
+  - jekyll-include-cache
 
+# Defaults
+defaults:
+  - scope:
+      path: "_portfolio_tradizionale"
+      type: portfolio_tradizionale
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: "_portfolio_giapponese"
+      type: portfolio_giapponese
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
