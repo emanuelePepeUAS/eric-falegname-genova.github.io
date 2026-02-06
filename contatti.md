@@ -12,7 +12,7 @@ Vuoi un preventivo o maggiori informazioni? Contattami!
 
 📍 **Zona di lavoro:** Genova e provincia  
 🏡 **Origine:** Sant'Stefano in Roero (CN)  
-📞 **Telefono/WhatsApp:** [Numero da aggiungere]  
+📞 **Telefono/WhatsApp:** +39 320n384 6494
 📧 **Email:** [Email da aggiungere]
 
 ### Servizio a Domicilio
