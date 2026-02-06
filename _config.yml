@@ -1,0 +1,44 @@
+# Informazioni Generali
+title: Eric | Falegnameria Artigiana Genova
+email: info@ericfalegname.it
+description: >-
+  Falegname artigiano con 10 anni di esperienza. Realizzazione mobili su misura, 
+  strutture per letti giapponesi (Futon) e interventi a domicilio a Genova e provincia.
+  Radici a Sant'Stefano in Roero, artigianato autentico dal 2018.
+
+# URL del sito (quando avrai il dominio o userai github.io)
+url: "https://eric-falegname-genova.github.io"
+baseurl: ""
+
+# Tema
+remote_theme: mmistakes/minimal-mistakes@4.26.2
+# remote_theme: cotes2020/jekyll-theme-chirpy
+# remote_theme: zerostaticthemes/jekyll-serif-theme
+
+
+# Configurazione Portfolio
+collections:
+  portfolio_tradizionale:
+    output: true
+    permalink: /lavori-tradizionali/:path/
+  portfolio_giapponese:
+    output: true
+    permalink: /letti-giapponesi-futon/:path/
+
+# Social & Contatti
+whatsapp: "+39123456789"
+instagram: "eric_falegname_genova"
+
+# SEO & Google Maps (Local Business)
+address: "Genova, Italia"
+experience_start: 2018
+
+# Plugin consigliati per SEO e Immagini
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-remote-theme
+  - jekyll-include-cache  # Necessario per Minimal Mistakes
+  - jekyll-archives
+
