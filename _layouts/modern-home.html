@@ -1,0 +1,73 @@
+---
+layout: modern-default
+---
+
+<!-- Hero Section -->
+<section class="hero" style="background-image: url('{{ " /assets/images/portfolio/letto-giapponese-futon.jpg" |
+    relative_url }}');">
+    <div class="hero-content">
+        <h1 class="hero-title">Falegnameria Artigiana</h1>
+        <p class="hero-subtitle">Mobili su misura, Restauro & Design a Genova</p>
+        <a href="#portfolio" class="btn">Entra nella Bottega</a>
+    </div>
+</section>
+
+<!-- Introduction -->
+<section class="intro-section text-center">
+    <div class="container">
+        <h2 class="section-title">Il Legno Antico</h2>
+        <p class="mb-2" style="max-width: 700px; margin: 0 auto 2rem;">
+            Nel cuore di Genova, un laboratorio che profuma di rovere e castagno.
+            Realizzo mobili che portano con sé il calore della tradizione e la solidità delle cose fatte per durare.
+        </p>
+    </div>
+</section>
+
+<!-- Portfolio Grid -->
+<section id="portfolio" class="portfolio-section">
+    <div class="container">
+        <h2 class="section-title text-center" style="color: #F5E6D3; text-shadow: 2px 2px 4px black;">I Miei Lavori</h2>
+        <div class="portfolio-grid">
+
+            {% assign portfolios = "portfolio_tradizionale,portfolio_giapponese" | split: "," %}
+            {% for portfolio_name in portfolios %}
+            {% assign collection = site[portfolio_name] %}
+            {% for doc in collection %}
+            <a href="{{ doc.url | relative_url }}" class="portfolio-item-link">
+                <div class="portfolio-item">
+                    {% if doc.header.overlay_image %}
+                    <div class="portfolio-bg"
+                        style="background-image: url('{{ doc.header.overlay_image | relative_url }}');"></div>
+                    {% elsif doc.header.teaser %}
+                    <div class="portfolio-bg" style="background-image: url('{{ doc.header.teaser | relative_url }}');">
+                    </div>
+                    {% elsif doc.header.image %}
+                    <div class="portfolio-bg" style="background-image: url('{{ doc.header.image | relative_url }}');">
+                    </div>
+                    {% else %}
+                    <div class="portfolio-bg" style="background-color: #333;"></div>
+                    {% endif %}
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">{{ doc.title }}</h3>
+                        <p class="portfolio-category">{{ portfolio_name | replace: '_', ' ' | capitalize }}</p>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="intro-section text-center" style="margin-top: 4rem;">
+    <div class="container">
+        <h2 class="section-title">Contattami</h2>
+        <p>Hai un progetto in mente per la tua casa?</p>
+        <a href="mailto:{{ site.email }}" class="btn"
+            style="background-color: #3E2723; border-color: #3E2723; margin-top: 1rem;">Scrivimi</a>
+        <a href="https://wa.me/{{ site.whatsapp | remove: ' ' }}" class="btn"
+            style="background-color: #25D366; border-color: #25D366; margin-top: 1rem;">WhatsApp</a>
+    </div>
+</section>

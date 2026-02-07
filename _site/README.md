@@ -29,16 +29,20 @@ eric-falegname-genova.github.io/
 ├── contatti.md # Pagina contatti
 ├── portfolio-tradizionale.md # Pagina portfolio classico
 ├── portfolio-giapponese.md # Pagina letti giapponesi
-├── _layouts/ # Template HTML
-├── _includes/ # Componenti riutilizzabili
-│ └── seo-schema.html # Schema.org per Local SEO
+├── _layouts/               # Template HTML
+│   ├── modern-default.html # Layout standard
+│   └── modern-home.html    # Layout homepage
+├── _includes/              # Componenti riutilizzabili
+│   └── seo-schema.html     # Schema.org per Local SEO
 ├── _portfolio_tradizionale/ # Collection: progetti classici
-│ └── [progetto].md # File singoli progetti
-├── _portfolio_giapponese/ # Collection: letti giapponesi
-│ └── [progetto].md # File singoli progetti
+│   ├── sedia-design.md     # Esempio progetto
+│   └── [progetto].md       # File singoli progetti
+├── _portfolio_giapponese/  # Collection: letti giapponesi
+│   ├── letto-futon-tatami.md # Esempio progetto
+│   └── [progetto].md       # File singoli progetti
 └── assets/
-├── css/ # Fogli di stile
-└── images/ # Immagini e foto portfolio
+    ├── css/                # Fogli di stile
+    └── images/             # Immagini e foto portfolio
 ```
 
 
@@ -88,7 +92,7 @@ _portfolio_giapponese/nome-progetto.md
 
 ```text
 ***
-layout: project
+layout: single
 title: "Nome del Progetto"
 date: 2025-01-15
 image: /assets/images/portfolio/progetto-nome.jpg
